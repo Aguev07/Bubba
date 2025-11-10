@@ -595,7 +595,7 @@ p {
 
 /* Add zoom effect on modal content images */
 .modal-content img:hover {
-    transform: scale(1.4);
+    transform: scale(1.2);
 }
 
 /* Media (Images and Videos) Styling */

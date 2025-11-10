@@ -27,9 +27,9 @@ document.addEventListener('DOMContentLoaded', function () {
     // Event images for each timeline event
     const eventImages = {
         1: ['images/meeting2.PNG', 'images/meeting3.PNG', 'images/meeting5.PNG','images/meeting4.PNG','images/meeting6.PNG','images/meeting7.PNG'],  // Images for Event 1
-        4: ['images/birthday2.PNG', 'images/birthday3.PNG', 'images/birthday4.PNG', 'images/birthday5.PNG', 'images/birthday6.PNG', 'images/birthday7.PNG','images/birthday10.PNG', 'images/birthday9.PNG','images/birthday8.PNG'],  // Images for Event 3
+        4: ['images/birthday2.PNG', 'images/birthday3.PNG', 'new/birthday2.mp4', 'images/birthday4.PNG', 'images/birthday5.PNG', 'new/birthday1.mp4', 'images/birthday6.PNG', 'images/birthday7.PNG','images/birthday10.PNG', 'images/birthday9.PNG','images/birthday8.PNG'],  // Images for Event 3
         5: ['images/kiss2.PNG', 'images/kiss3.PNG', 'new/kiss1.PNG', 'images/kiss4.PNG', 'images/kiss5.PNG', 'new/kiss2.PNG'],   // Images for Event 5
-        7: ['images/christmas2.PNG', 'images/christmas3.PNG', 'images/christmas4.PNG', 'images/christmas5.PNG','images/christmas6.PNG', 'images/christmas7.PNG', 'images/christmas8.PNG','images/christmas9.PNG'],  // Images for Event 1
+        7: ['images/christmas2.PNG', 'images/christmas3.PNG', 'images/christmas4.PNG', 'new/christmas1.mp4', 'images/christmas5.PNG','images/christmas6.PNG', 'images/christmas7.PNG', 'images/christmas8.PNG','images/christmas9.PNG'],  // Images for Event 1
         8: ['images/concert2.PNG', 'images/concert3.PNG', 'images/concert5.PNG','images/concert6.PNG', 'images/concert2.mp4', 'images/concert7.PNG', 'images/concert8.PNG','images/concert1.mp4'],  // Images for Event 3
         9: ['images/valentines2.PNG', 'new/val2.PNG', 'images/valentines3.PNG', 'new/val1.mp4', 'images/valentines5.PNG', 'images/valentines4.PNG'],   // Images for Event 4
         10: ['images/trip2.PNG', 'images/trip3.PNG', 'new/trip2.mp4','images/trip4.PNG', 'images/trip5.PNG','images/trip6.PNG', 'new/trip3.mp4', 'images/trip7.PNG', 'images/trip8.PNG', 'images/trip9.PNG'],   // Images for Event 5

@@ -26,14 +26,14 @@ const countdown = setInterval(function() {
 document.addEventListener('DOMContentLoaded', function () {
     // Event images for each timeline event
     const eventImages = {
-        1: ['images/meeting2.PNG', 'images/meeting3.PNG', 'images/meeting4.PNG','images/meeting5.PNG'],  // Images for Event 1
-        4: ['images/birthday2.PNG', 'images/birthday3.PNG', 'images/birthday4.PNG', 'images/birthday5.PNG', 'images/birthday6.PNG', 'images/birthday7.PNG','images/birthday8.PNG', 'images/birthday9.PNG','images/birthday10.PNG'],  // Images for Event 3
+        1: ['images/meeting2.PNG', 'images/meeting3.PNG', 'images/meeting5.PNG','images/meeting4.PNG','images/meeting6.PNG','images/meeting7.PNG'],  // Images for Event 1
+        4: ['images/birthday2.PNG', 'images/birthday3.PNG', 'images/birthday4.PNG', 'images/birthday5.PNG', 'images/birthday6.PNG', 'images/birthday7.PNG','images/birthday10.PNG', 'images/birthday9.PNG','images/birthday8.PNG'],  // Images for Event 3
         5: ['images/kiss2.PNG', 'images/kiss3.PNG', 'images/kiss4.PNG', 'images/kiss5.PNG'],   // Images for Event 5
-        7: ['images/christmas2.PNG', 'images/christmas3.PNG', 'images/christmas4.PNG', 'images/christmas5.PNG','images/christmas6.PNG', 'images/christmas7.PNG', 'images/christmas8.PNG'],  // Images for Event 1
-        8: ['images/concert2.PNG', 'images/concert3.PNG', 'images/concert5.PNG','images/concert6.PNG', 'images/concert7.mp4', 'images/concert8.PNG'],  // Images for Event 3
-        9: ['images/valentines2.PNG', 'images/valentines3.PNG', 'images/valentines4.PNG','images/valentines5.mp4', 'images/valentines6.PNG','images/valentines7.PNG'],   // Images for Event 4
+        7: ['images/christmas2.PNG', 'images/christmas3.PNG', 'images/christmas4.PNG', 'images/christmas5.PNG','images/christmas6.PNG', 'images/christmas7.PNG', 'images/christmas8.PNG','images/christmas9.PNG'],  // Images for Event 1
+        8: ['images/concert2.PNG', 'images/concert3.PNG', 'images/concert5.PNG','images/concert6.PNG', 'images/concert7.PNG', 'images/concert8.PNG'],  // Images for Event 3
+        9: ['images/valentines2.PNG', 'images/valentines3.PNG', 'images/valentines5.PNG', 'images/valentines4.PNG'],   // Images for Event 4
         10: ['images/trip2.PNG', 'images/trip3.PNG', 'images/trip4.PNG', 'images/trip5.PNG','images/trip6.PNG', 'images/trip7.PNG', 'images/trip8.PNG', 'images/trip9.PNG'],   // Images for Event 5
-        11: ['images/us3.PNG', 'images/us4.PNG', 'images/us5.PNG', 'images/us6.mp4']   // Images for Event 5
+        11: ['images/us3.PNG', 'images/us4.PNG', 'images/us5.PNG','images/us6.PNG']   // Images for Event 5
     };
 
     // Function to open the modal and show images related to the clicked event

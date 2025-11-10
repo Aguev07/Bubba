@@ -1,0 +1,621 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff; /* White background for the entire body */
+    color: #333;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+/* Header Section (keeps the white background) */
+header {
+    background-color: #fff; /* White background for header */
+    padding: 3rem 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    margin-bottom: 3rem; /* Margin to create space below the header */
+}
+
+header h1 {
+    font-family: 'Dancing Script', cursive; /* Cursive font for heading */
+    font-size: 3.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Content Below Header (this area has the gray background) */
+.main-content {
+    background: #f7f7f7; /* Gray background for content */
+    padding: 4rem 1rem; /* Adjust padding as needed */
+    width: 100%; /* Full width */
+    min-height: 100vh; /* Ensure it takes up the remaining height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Button Styling */
+button {
+    padding: 0.5rem 1.5rem;  /* Smaller padding for a sleeker look */
+    background-color: #ba4e4e; /* Romantic coral color */
+    color: white;
+    font-size: 1.1rem; /* Slightly smaller font */
+    border: none;
+    border-radius: 30px; /* Slightly less rounded for a sleeker look */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lighter shadow for sleekness */
+}
+
+button:hover {
+    background-color: #8e3e31; /* Darker coral shade on hover */
+}
+
+
+/* Footer Section */
+footer {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    font-size: 0.8em;
+    color: #666;
+    text-align: center;
+}
+
+/* Global styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    text-align: center;
+}
+
+/* Container styles for each question block */
+.question-container {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.question-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Answer options */
+.answer-options {
+    margin-bottom: 20px;
+}
+
+.answer-options input {
+    margin-right: 10px;
+}
+
+.answer-options label {
+    font-size: 18px;
+}
+
+/* Text input box */
+.answer-box input {
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Result message */
+.result-message {
+    display: none;
+    font-size: 18px;
+    color: #2c7a7b;
+    margin-top: 20px;
+}
+
+.sweet-message {
+    position: fixed;
+    top: 0; /* Start from the top */
+    left: 0; /* Start from the left */
+    width: 100%; /* Make the message span the entire width */
+    height: 100%; /* Make the message span the entire height */
+    background-color: rgb(242, 205, 205); /* Dusty mauve with some transparency */
+    color: #000000; /* Ivory white text */
+    display: flex;
+    flex-direction: column; /* Stack the content vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    padding: 40px;
+    z-index: 9999; /* Ensure it's on top of all other elements */
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Animation to make it fade in smoothly */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Styling for the close button */
+.close-btn {
+    background-color: #F5F5F5; /* Ivory white */
+    color: #9E7C9B; /* Dusty mauve */
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 30px;
+    margin-top: 25px; /* Add space above the button */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block; /* Ensure the button stays inline */
+}
+
+/* Hover effect for the close button */
+.close-btn:hover {
+    background-color: #f2cf5c; /* Pale Gold */
+    color: white;
+}
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    overflow-x: hidden;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+p {
+    font-size: 1.1rem;
+}
+
+/* Center the timeline container */
+.timeline-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: flex-start; /* Align vertically at the top */
+    width: 100%; /* Full width */
+}
+
+/* Ensure timeline is centered */
+.timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 90%; /* Full width with a max width to keep it responsive */
+    max-width: 1000px; /* Optional: max width */
+    padding: 0 20px; /* Padding around timeline */
+    margin: 0 auto; /* Center the timeline */
+}
+
+/* Timeline event (start hidden, animate into view on scroll) */
+.timeline-event {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    opacity: 0; /* Hidden initially */
+    transform: translateY(50px); /* Start below */
+    transition: all 0.6s ease-in-out; /* Smooth transition */
+    padding-left: 0; /* Remove left padding */
+}
+
+/* Event content box */
+.event-content {
+    position: relative;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Flexible width */
+    max-width: 400px; /* Optional: max width */
+    z-index: 2; /* Ensure the content is above other elements */
+    margin: 0 auto; /* Center event box */
+    box-sizing: border-box;
+}
+
+/* Event content header and description */
+.event-content h2 {
+    font-size: 24px;
+    color: #ba4e4e; /* Soft red color */
+    margin-bottom: 10px;
+    font-family: 'Merriweather', serif;
+}
+
+.event-content p {
+    font-size: 16px;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Image within the event box */
+.event-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+    object-fit: cover; /* Ensure image covers the area without stretching */
+}
+
+/* Event visibility: when event enters the viewport */
+.timeline-event.visible {
+    opacity: 1;
+    transform: translateY(0); /* Move into place */
+}
+
+/* Optional: Add a line in the middle to separate timeline items */
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .timeline-event {
+        margin-bottom: 30px;
+    }
+
+    .event-content {
+        max-width: 90%; /* Make the event box wider on smaller screens */
+    }
+}
+
+/* Styling for the Intro Text Section */
+.intro-text {
+    padding: 2rem 3rem;
+    background-color: #f9f9f9;  /* Light background color */
+    margin: 20px 0;
+    border-radius: 8px;
+    text-align: center;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(30px); /* Start below the normal position */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Smooth transition */
+}
+
+/* When the section becomes visible (fade-in effect) */
+.intro-text.visible {
+    opacity: 1;
+    transform: translateY(0); /* Moves to its normal position */
+}
+
+/* Image styling */
+.event-image img {
+    width: 100%; /* Make the image responsive */
+    max-width: 500px; /* Set a max width for large images */
+    height: auto; /* Keep the aspect ratio intact */
+    margin-bottom: 20px; /* Space between the image and the text */
+}
+
+.intro-text h2 {
+    font-family: 'Dancing Script', sans-serif;
+    font-size: 2.8rem;
+    color: #ba4e4e;  /* Romantic color */
+    margin-bottom: 1rem;
+}
+
+.intro-text p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 0.3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Styling for solid line */
+.solid-line {
+    width: 80%;  /* Line takes up 80% of the container's width */
+    height: 2px;  /* Thickness of the line */
+    background-color: #000000;  /* Solid color for the line */
+    margin: 20px auto;  /* Centers the line and adds space above and below */
+}
+
+/* Add delay to the fade-in of sections */
+#one-year-section.visible {
+    transition-delay: 0.5s; /* Delay the fade-in of the first section */
+}
+
+#journey-section.visible {
+    transition-delay: 1s; /* Delay the fade-in of the second section */
+}
+
+
+/* Styling for Soundtrack Section */
+/* Hide the section initially */
+.soundtrack-section {
+    padding: 2rem 3rem;
+    background-color: #f9f9f9;  /* Light background color */
+    margin: 20px 0;
+    border-radius: 8px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px); /* This will initially move the section down */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition */
+}
+
+/* When the section is in view, it will transition to its normal state */
+.soundtrack-section.visible {
+    opacity: 1;
+    transform: translateY(0); /* This will bring the section to its normal position */
+}
+
+.soundtrack-section h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: #ba4e4e;
+    margin-bottom: 1rem;
+}
+
+.soundtrack-section p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* Image container style */
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.image-item {
+    cursor: pointer;
+    width: 130px;
+    height: 130px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+}
+
+.image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Audio player hidden by default */
+.audio-player {
+    display: none;
+}
+
+#timer {
+    font-family: 'Roboto Slab', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #ba4e4e;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* Wrapper for the icons */
+.love-letter-section {
+    display: flex;                  /* Align the icons horizontally */
+    justify-content: center;        /* Center the icons */
+    gap: 40px;                      /* Space between the icons */
+    align-items: center;            /* Vertically center the icons */
+}
+
+/* Style for both icons */
+.love-letter-icon img {
+    width: 80px;                    /* Set the size of the icons */
+    height: 80px;
+    cursor: pointer;                /* Show a pointer when hovering over the icons */
+    transition: transform 0.3s ease; /* Smooth hover animation */
+}
+
+/* Optional: Specific styling for the music icon */
+#music-icon img {
+    width: 60px;  /* You can adjust the size */
+    height: 60px;
+}
+
+/* Hover Effect on Envelope */
+.love-letter-icon img:hover {
+    transform: scale(1.1);  /* Slight zoom effect */
+    opacity: 0.8;
+}
+
+.love-letter {
+    width: 80%;
+    max-width: 900px;
+    margin: 60px auto; /* Added margin-top to push the whole box down */
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.letter-container {
+    position: relative;
+}
+
+.letter-header h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 36px;
+    color: #ba4e4e;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeInUp 1s forwards 0.5s;
+}
+
+.letter-body {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #444;
+    font-family: 'Merriweather', serif;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards 1s;
+}
+
+.letter-body p {
+    margin-bottom: 20px;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Modal Styles */
+.modal {
+    display: none;  /* Hidden by default */
+    position: fixed; /* Fixed on top of the page */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background with opacity */
+    z-index: 1000; /* Make sure it is above all other content */
+    overflow: hidden; /* Prevent scrolling inside the modal */
+    opacity: 0;  /* Initially hidden (we'll animate later) */
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Modal Content */
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the modal */
+    background-color: white;
+    padding: 20px;
+    width: 80%; /* Increased width for a larger modal */
+    max-width: 90%; /* Maximum width */
+    max-height: 90%; /* Maximum height */
+    overflow-y: auto; /* Allow scrolling inside the modal if the content overflows */
+    border-radius: 8px;
+    z-index: 1010; /* Ensure modal content is above the background */
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Gallery Styling */
+.gallery {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Two images per row */
+    grid-gap: 15px; /* Space between images */
+    justify-items: center; /* Center the images in each grid cell */
+    padding: 10px;
+}
+
+/* Gallery Images */
+.gallery img {
+    width: 100%; /* Fill the available space */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Slight shadow for image depth */
+}
+
+/* Hover effect for images in the modal */
+.gallery img:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Fade-in effect when modal is shown */
+.modal.show {
+    display: block;
+    opacity: 1; /* Fade in the modal */
+}
+
+/* Optional: Optional zoom effect on modal content images */
+.modal-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+/* Add zoom effect on modal content images */
+.modal-content img:hover {
+    transform: scale(1.05);
+}
+
+/* Media (Images and Videos) Styling */
+.gallery-media {
+    width: 100%; /* Fill the available space */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Slight shadow for media items */
+}
+
+/* Hover effect for media items */
+.gallery-media:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* For Videos - Make sure they are responsive and fit well in the grid */
+.gallery-media.video {
+    max-height: 300px;  /* Limit video height */
+    object-fit: contain;  /* Ensure video maintains aspect ratio */
+}
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bubba</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <h1>Hey Pretty!</h1>
+        <p>Time has a silly way of moving</p>
+    </header>
+
+    <section id="countdown">
+        <div id="timer"></div> <!-- Countdown Timer -->
+    </section>
+
+    <footer>
+        <p>Made with love</p>
+    </footer>
+
+    <script>
+        // Set the date we're counting down to (customize this)
+        const countDownDate = new Date("Nov 11, 2025 00:00:00").getTime(); // Set your target date
+
+        // Update the countdown every 1 second
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+
+            // Calculate time units
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the element with id="timer"
+            document.getElementById("timer").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+            // If the countdown is over, redirect to the cover page
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("timer").innerHTML = "❤️";
+                setTimeout(function() {
+                    window.location.href = 'index1.html'; // Redirect to cover page
+                }, 2000); // Delay 2 seconds before redirecting
+            }
+        }, 1000); // Update every second
+    </script>
+
+</body>
+</html>

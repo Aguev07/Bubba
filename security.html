@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bubba</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>You're Almost There Bby...</h1>
+        <p>Just a few more steps to prove this is You</p>
+    </header>
+
+    <!-- Question 1: First Kiss Location -->
+    <div class="question-container" id="question-container">
+        <h2>Where was our first kiss?</h2>
+        <div class="answer-options">
+            <input type="radio" id="kiss2" name="kiss-location" value="Beach">
+            <label for="kiss2">The beach at sunset</label><br>
+            <input type="radio" id="kiss1" name="kiss-location" value="Park">
+            <label for="kiss1">Under the stars at the park</label><br>
+            <input type="radio" id="kiss3" name="kiss-location" value="Restaurant">
+            <label for="kiss3">That cozy restaurant</label><br>
+            <input type="radio" id="kiss4" name="kiss-location" value="Living-room">
+            <label for="kiss4">In the living room on a rainy evening</label><br>
+        </div>
+        <button onclick="nextQuestion('kiss')">Next Question</button>
+    </div>
+
+    <!-- Question 2: Birthday Gift -->
+    <div class="question-container" id="second-question-container" style="display: none;">
+        <h2>What was my first birthday gift to you?</h2>
+        <div class="answer-options">
+            <input type="radio" id="gift1" name="gift" value="Necklace">
+            <label for="gift1">A necklace with a charm</label><br>
+            <input type="radio" id="gift2" name="gift" value="Flower">
+            <label for="gift2">A bouquet of roses</label><br>
+            <input type="radio" id="gift3" name="gift" value="Watch">
+            <label for="gift3">A Miffy pyjama set</label><br>
+            <input type="radio" id="gift4" name="gift" value="Capy">
+            <label for="gift4">A capybara...</label><br>
+        </div>
+        <button onclick="nextQuestion('gift')">Next Question</button>
+    </div>
+
+    <!-- Question 3: First Album Gift (User Types Answer) -->
+    <div class="question-container" id="third-question-container" style="display: none;">
+        <h2>What was the album name of my first vinyl gift to you?</h2>
+        <div class="answer-box">
+            <input type="text" id="album-answer" placeholder="Type your answer here...">
+            <button onclick="checkAlbumAnswer()">Check Answer</button>
+        </div>
+    </div>
+
+    <!-- Question 3: First Album Gift (User Types Answer) -->
+    <div class="question-container" id="fourth-question-container" style="display: none;">
+        <h2>What was the very first movie we watched together (not in cinema)?</h2>
+        <div class="answer-box">
+            <input type="text" id="memory-answer" placeholder="Type your answer here...">
+            <button onclick="checkMemoryAnswer()">Check Answer</button>
+        </div>
+    </div>
+
+    <!-- Question 4: Favorite Thing to Make You Feel Loved -->
+    <div class="question-container" id="fifth-question-container" style="display: none;">
+        <h2>What’s your favorite thing I do to make you feel loved?</h2>
+        <div class="answer-box">
+            <input type="text" id="written-answer" placeholder="Type your answer here...">
+            <button onclick="checkWrittenAnswer()">Check Answer</button>
+        </div>
+    </div>
+
+
+
+ <script>
+        // Function to move to the next question based on user selection
+        function nextQuestion(currentQuestion) {
+            if (currentQuestion === 'kiss') {
+                var selectedKiss = document.querySelector('input[name="kiss-location"]:checked');
+                if (!selectedKiss) {
+                    alert("Please select an answer for the first kiss location.");
+                    return;
+                }
+                if (selectedKiss.value === "Park") {
+                    showSweetMessage("Kiss me again, then!");
+                    setTimeout(function() {
+                        document.getElementById("second-question-container").style.display = "block";
+                        document.getElementById("question-container").style.display = "none";
+                    }, 1000);
+                } else {
+                    alert("You're not my Bubba! Bye!");
+                }
+            }
+
+            if (currentQuestion === 'gift') {
+                var selectedGift = document.querySelector('input[name="gift"]:checked');
+                if (!selectedGift) {
+                    alert("Please select an answer for the birthday gift.");
+                    return;
+                }
+                if (selectedGift.value === "Capy") {
+                    showSweetMessage("Only the first! You better be ready for more");
+                    setTimeout(function() {
+                        document.getElementById("third-question-container").style.display = "block";
+                        document.getElementById("second-question-container").style.display = "none";
+                    }, 1000);
+                } else {
+                    alert("You're not my Bubba! Bye!");
+                }
+            }
+        }
+
+        // Function to check the first album gift answer (user types the answer)
+        function checkAlbumAnswer() {
+            const albumAnswer = document.getElementById("album-answer").value.trim().toLowerCase();  // Convert to lowercase to make it case-insensitive
+            if (!albumAnswer) {
+                alert("Please type your answer!");
+                return;
+            }
+
+            const correctAnswer = "eternal sunshine";  // Correct answer
+
+            // Check if the typed answer matches the correct answer
+            if (albumAnswer === correctAnswer) {
+                showSweetMessage("You're my supernatural.");
+                setTimeout(function() {
+                    document.getElementById("fourth-question-container").style.display = "block";
+                    document.getElementById("third-question-container").style.display = "none";
+                }, 1000);
+            } else {
+                alert("You're not my Bubba! Bye!");
+            }
+        }
+
+        function checkMemoryAnswer() {
+            const memoryAnswer = document.getElementById("memory-answer").value.trim().toLowerCase();  // Convert to lowercase to make it case-insensitive
+            if (!memoryAnswer) {
+                alert("Please type your answer!");
+                return;
+            }
+
+            const correctAnswer = "barbie";  // Correct answer
+
+            // Check if the typed answer matches the correct answer
+            if (memoryAnswer === correctAnswer) {
+                showSweetMessage("Can You be the leading lady of my life?");
+                setTimeout(function() {
+                    document.getElementById("fifth-question-container").style.display = "block";
+                    document.getElementById("fourth-question-container").style.display = "none";
+                }, 1000);
+            } else {
+                alert("You're not my Bubba! Bye!");
+            }
+        }
+
+        // Function to check the written answer for the last question
+        function checkWrittenAnswer() {
+            const writtenAnswer = document.getElementById("written-answer").value.trim();
+            if (!writtenAnswer) {
+                alert("Please type your answer!");
+                return;
+            }
+
+            // Show sweet message and transition after 'Ok' button click
+            showSweetMessage("Got it bub! Now I know what to do!", function() {
+                window.location.href = "timeline.html"; // Redirect to the new page
+            });
+
+            // Optionally hide the fourth question after submission
+            document.getElementById("fourth-question-container").style.display = "none";
+        }
+
+        // Function to display a sweet message
+        function showSweetMessage(message, callback) {
+            var sweetMessage = document.createElement("div");
+            sweetMessage.className = "sweet-message";
+            sweetMessage.innerHTML = `${message} <button class="close-btn">Ok</button>`;
+            document.body.appendChild(sweetMessage);
+            var closeButton = sweetMessage.querySelector(".close-btn");
+            closeButton.addEventListener("click", function() {
+                sweetMessage.remove();
+                if (callback) callback();
+            });
+        }
+    </script>
+
+    <footer>
+        <p>Made with love</p>
+    </footer>
+</body>
+</html>

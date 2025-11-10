@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bubba</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<section class="intro-text" id="one-year-section">
+    <!-- Image of you and your partner at the top -->
+    <div class="event-image">
+        <img src="images/us2.PNG" alt="Us on Our Anniversary">
+    </div>
+    
+    <h2>One Year</h2> 
+    <p>Happy Anniversary My Ma! Look at how far we've come! From the first silly Ariana without the 'R' to this moment, I'm so, so grateful I met you.</p>
+    <p>I know this might be a little silly, but I hope this brings a smile to your face!</p>
+</section>
+
+<div class="solid-line"></div>
+
+<section class="intro-text" id="journey-section">
+    <h2>Our Journey</h2>
+    <p>Live through the moments.</p>
+</section>
+
+<!-- Timeline Container -->
+<div class="timeline-container">
+    <div class="timeline">
+        <div class="timeline-event" id="event-1" onclick="openModal(1)">
+            <div class="timeline-point"></div>
+            <div class="event-content">
+                <h2>Our First Meeting</h2>
+                <p>2023</p>
+                <img src="images/meeting1.PNG" alt="First Meeting" class="timeline-image" data-event="1">
+                <p>We met at work yay!!! And yes, it's been more than just 1 year.</p>
+            </div>
+        </div>
+
+        <div class="timeline-event" id="event-2" onclick="openModal(2)">
+            <div class="timeline-point"></div>
+            <div class="event-content">
+                <h2>Our First Date</h2>
+                <p>16 Dec 2023</p>
+                <img src="images/date1.PNG" alt="First Date" class="timeline-image" data-event="2" />
+                <p>Haha Date? More like a one-on-one hang out and me wanting time to stop.</p>
+            </div>
+        </div>
+
+        <div class="timeline-event" id="event-4" onclick="openModal(4)">
+            <div class="timeline-point"></div>
+            <div class="event-content">
+                <h2>Our First Birthdays</h2>
+                <img src="images/birthday1.PNG" alt="First Trip" class="timeline-image" data-event="4" />
+                <p>You are the cutest! All the love quotes in the Harmony book was about you.</p>
+            </div>
+        </div>
+
+        <div class="timeline-event" id="event-5" onclick="openModal(5)">
+            <div class="timeline-point"></div>
+            <div class="event-content">
+                <h2>Our First Kiss</h2>
+                <p>8 Sep 2024</p>
+                <img src="images/kiss1.PNG" alt="First Kiss" class="timeline-image" data-event="5" />
+                <p>Still can't stop.</p>
+            </div>
+        </div>
+
+        <div class="timeline-event" id="event-6" onclick="openModal(6)">
+            <div class="timeline-point"></div>
+            <div class="event-content">
+                <h2>Our First I Love You</h2>
+                <p>11 Nov 2024</p>
+                <img src="images/ily1.PNG" alt="First ILY" class="timeline-image" data-event="6" />
+                <p>So, so nervous. But I meant it, I mean it and I will mean it.</p>
+            </div>
+        </div>
+
+        <div class="timeline-event" id="event-7" onclick="openModal(7)">
+            <div class="timeline-point"></div>
+            <div class="event-content">
+                <h2>Our First Christmas</h2>
+                <p>22 Dec 2024</p>
+                <img src="images/christmas1.PNG" alt="First Christmas" class="timeline-image" data-event="7" />
+                <p>We spent our Christmas in Max Brenner! With the best present ever - You.</p>
+            </div>
+        </div>
+
+        <div class="timeline-event" id="event-8" onclick="openModal(8)">
+            <div class="timeline-point"></div>
+            <div class="event-content">
+                <h2>Our First Concert</h2>
+                <p>8 Feb 2025</p>
+                <img src="images/concert1.PNG" alt="First Concert" class="timeline-image" data-event="8" />
+                <p>So hot, you're hot. Alexa play Chicago by Djo.</p>
+            </div>
+        </div>
+
+        <div class="timeline-event" id="event-9" onclick="openModal(9)">
+            <div class="timeline-point"></div>
+            <div class="event-content">
+                <h2>Our First Valentines</h2>
+                <p>14 Feb 2025</p>
+                <img src="images/valentines1.PNG" alt="First Valentines" class="timeline-image" data-event="9" />
+                <p>I still remember how cute you looked carrying the rose and my iced mocha. A day for the hearts, a day for Yan!</p>
+            </div>
+        </div>
+
+        <div class="timeline-event" id="event-10" onclick="openModal(10)">
+            <div class="timeline-point"></div>
+            <div class="event-content">
+                <h2>Our First Trip</h2>
+                <p>26 July 2025</p>
+                <img src="images/trip1.PNG" alt="First Trip" class="timeline-image" data-event="10" />
+                <p>The beach, fish and chips and pasta were amazing Bubba. Apart from your sickness, I loved loved this trip.</p>
+            </div>
+        </div>
+
+        <div class="timeline-event" id="event-11" onclick="openModal(11)">
+            <div class="timeline-point"></div>
+            <div class="event-content">
+                <h2>Us</h2>
+                <img src="images/us1.PNG" alt="Us" class="timeline-image" data-event="11" />
+                <p>You and Me</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for displaying images -->
+<div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+        <h2 id="modal-title">Event Images</h2>
+        <div id="modal-gallery" class="gallery">
+            <!-- Images will be dynamically inserted here -->
+        </div>
+    </div>
+</div>
+
+
+    <div class="solid-line"></div>
+
+    <section class="soundtrack-section">
+    <h2>Our Soundtrack</h2>
+    <p>Listen through the moments.</p>
+    
+    <div class="image-container">
+    <!-- Song 1 Image and Data -->
+    <div class="image-item" data-song="song1">
+        <img src="images/count.PNG" alt="Song 1 Cover">
+    </div>
+    
+    <!-- Song 2 Image and Data -->
+    <div class="image-item" data-song="song2">
+        <img src="images/dive.PNG" alt="Song 2 Cover">
+    </div>
+    <!-- Add more images for each song as needed -->
+
+    <div class="image-item" data-song="song3">
+        <img src="images/santa.PNG" alt="Song 3 Cover">
+    </div>
+
+    <div class="image-item" data-song="song4">
+        <img src="images/birds.PNG" alt="Song 4 Cover">
+    </div>
+
+    </div>
+
+    <!-- Hidden audio players -->
+    <audio id="song1" class="audio-player">
+        <source src="images/count.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <audio id="song2" class="audio-player">
+        <source src="images/dive.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <audio id="song3" class="audio-player">
+        <source src="images/santa.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <audio id="song4" class="audio-player">
+        <source src="images/birds.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    </section>
+
+<section class="love-letter-section">
+    <!-- Love Letter Icon -->
+    <div class="love-letter-icon" id="love-letter-icon">
+        <img src="images/envelope-icon.png" alt="Love Letter Icon">
+    </div>
+    
+    <!-- Music Icon (New) -->
+    <div class="love-letter-icon" id="music-icon">
+        <img src="images/music.png" alt="Music Icon">
+    </div>
+</section>
+
+
+    <footer>
+        <p>Made with love</p>
+    </footer>
+
+    <script>
+        // script.js
+        document.addEventListener('DOMContentLoaded', function () {
+            const timelineEvents = document.querySelectorAll('.timeline-event');
+            const threshold = 0.2;
+            const images = document.querySelectorAll('.image-item');
+            const audioPlayers = document.querySelectorAll('.audio-player');
+            const introSections = document.querySelectorAll('.intro-text'); // Select all intro-text sections
+            const soundtrackSection = document.querySelector('.soundtrack-section');
+
+            // Callback function that adds the 'visible' class when the section is in view
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Add the 'visible' class when the section is in view
+                        entry.target.classList.add('visible');
+                        // Stop observing the section after it becomes visible
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.5  // Trigger when 50% of the section is visible
+            });
+
+            // Start observing the soundtrack section
+            observer.observe(soundtrackSection);
+
+            // Loop through each image and add an event listener for clicks
+            images.forEach(image => {
+                image.addEventListener('click', function() {
+                    // Get the song ID associated with the clicked image
+                    const songId = image.getAttribute('data-song');
+                    const audio = document.getElementById(songId);
+
+                    // If the audio is already playing, pause it and reset
+                    if (!audio.paused) {
+                        audio.pause();
+                        audio.currentTime = 0; // Reset to the beginning
+                    } else {
+                        // If the audio is paused, pause all other audio players and play the selected song
+                        audioPlayers.forEach(player => {
+                            player.pause();
+                            player.currentTime = 0; // Reset all other audio players to the beginning
+                        });
+
+                        // Play the selected song
+                        audio.play();
+                    }
+                });
+            });
+            introSections.forEach(section => {
+                section.classList.add('visible');
+            });
+
+            // Function to check if an event is in the viewport
+            function checkEventInView() {
+                timelineEvents.forEach(event => {
+                    const rect = event.getBoundingClientRect();
+                    const windowHeight = window.innerHeight;
+
+                    // Calculate the top and bottom positions of the element
+                    const elementTop = rect.top;
+                    const elementBottom = rect.bottom;
+
+                    // Check if the element is in the viewport with the threshold
+                    const isVisible = (elementTop < windowHeight * (1 - threshold)) && (elementBottom > windowHeight * threshold);
+
+                    // If event is in the viewport, add the 'visible' class to animate it
+                    if (isVisible) {
+                        event.classList.add('visible');
+                    }
+                });
+            }
+
+            // Listen for scroll events and check if events are in view
+            window.addEventListener('scroll', checkEventInView);
+
+            // Initial check in case events are already in view when page loads
+            checkEventInView();
+        });
+        document.getElementById('love-letter-icon').addEventListener('click', function() {
+            // Add an opening animation to the envelope
+            const envelopeIcon = document.querySelector('.love-letter-icon img');
+            
+            envelopeIcon.style.transform = 'scale(1.2)';
+            envelopeIcon.style.transition = 'transform 1s ease-out';
+            
+            // After animation, transition to the letter content page
+            setTimeout(function() {
+                window.location.href = "letter.html";  // Transition to the love letter page
+            }, 1000);  // Wait for the animation to finish before redirect
+        });
+        
+</script>
+
+    <script src="script.js"></script>
+</body>
+</html>
